@@ -75,6 +75,7 @@ p { line-height: 1.65; }
 .research-index span { margin-left: 4px; }
 .research-topic { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.85fr); gap: clamp(24px, 6vw, 90px); padding-block: clamp(30px, 5vw, 58px); border-top: 1px solid var(--line); }
 .research-topic h2 { max-width: 350px; margin: 0; font-size: clamp(1.5rem, 3vw, 2.3rem); }
+.research-topic-image { display: block; width: min(100%, 240px); height: auto; aspect-ratio: 3 / 2; object-fit: cover; margin-top: 16px; border-radius: 8px; background: #eef5f7; }
 .research-detail { max-width: 670px; color: var(--muted); }
 .research-detail p { margin: 0; }
 .research-detail .research-question { color: var(--ink); font-size: 1.12rem; font-weight: 600; line-height: 1.55; }
@@ -173,6 +174,17 @@ footer { background: var(--navy); color: #d2e0eb; border-top: 1px solid #40546a;
 .home-industry { background: #eef5f7; padding-block: clamp(32px, 5vw, 56px); }
 .home-industry-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px 36px; }
 .home-industry p { max-width: 720px; margin: 0; color: var(--muted); }
+.home-industry .home-ministerial { margin: 16px 0 9px; }
+.home-ministerial strong { color: var(--ink); }
 @media (max-width: 700px) {
   .home-about { grid-template-columns: 1fr; }
 }
+
+.collaboration-gallery { position: relative; flex: 0 0 100%; min-width: 0; }
+.collaboration-slides { aspect-ratio: 1.9; max-height: 540px; overflow: hidden; border-radius: 10px; background: var(--navy); }
+.collaboration-slides img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.collaboration-gallery [hidden] { display: none; }
+.collaboration-controls button { position: absolute; top: 50%; transform: translateY(-50%); display: grid; place-items: center; width: 44px; height: 44px; padding: 0 0 3px; border: 1px solid #ffffff66; border-radius: 50%; background: #081829c9; color: white; font: 1.85rem/1 system-ui, sans-serif; cursor: pointer; }
+.collaboration-controls button:hover, .collaboration-controls button:focus-visible { background: var(--navy); }
+.collaboration-controls [data-previous] { left: clamp(8px, 2vw, 20px); }
+.collaboration-controls [data-next] { right: clamp(8px, 2vw, 20px); }

@@ -7,7 +7,7 @@
   <title>Publications | AI4SmartGrids Lab</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="site.js" defer></script>
 </head>
@@ -15,13 +15,13 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="index.html"><span class="mark" aria-hidden="true">ϟ</span> AI4SmartGrids <small>LAB</small></a>
+    <a class="brand" href="index.html"><img src="assets/ai4smartgrids-logo.webp" width="840" height="152" alt="AI4SmartGrids Lab"></a>
     <button class="menu" type="button" aria-controls="navigation" aria-expanded="false">Menu</button>
     <nav id="navigation" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
       <a href="projects.html">Projects</a>
-      <a href="team.html">Our Team</a>
+      <a href="team.html">Team</a>
       <a href="publications.html" aria-current="page">Publications</a>
       <a href="news.html">News</a>
       <a href="contact.html">Contact</a>
@@ -30,10 +30,140 @@
 </header>
 <main id="main" class="inner-page" tabindex="-1">
   <section id="publications" class="section wrap" aria-labelledby="pub-title">
-        <h1 id="pub-title">Publications</h1>
-        <article class="entry"><p class="kicker">Artificial Intelligence Review · 2026</p><h3>AI-driven household electricity load forecasting: challenges, methods, and future directions</h3><a class="text-link" href="https://doi.org/10.1007/s10462-026-11583-w">Read the paper <span aria-hidden="true">→</span></a></article>
-      </section>
+    <h1 id="pub-title">Publications</h1>
+    <p class="section-intro">Publications by lab members on smart grids, energy systems and related AI methods.</p>
+    <p class="publication-download"><a class="text-link" href="publications.bib" download>Download BibTeX ↓</a></p>
+    <div id="publications-bibbase">
+      <script src="publications.js"></script>
+    </div>
+    <div class="publication-list" aria-label="Publication list">
+      <article class="entry">
+        <p class="kicker">2027 · Accepted full paper · Load forecasting</p>
+        <h2>One Model Across Resolutions: Unified Household Load Forecasting with Hypernetwork Conditioning</h2>
+        <p>Elmar Ibrahimov, Hui Tian, Lee Weng, Yanming Zhu, Xuefei Yin<br><em>IEEE Symposium Series on Computational Intelligence (SSCI 2027), IEEE Symposia on CI for Energy, Transport, and Environmental Sustainability</em></p>
+      </article>
+      <article class="entry">
+        <p class="kicker">2027 · Accepted full paper · Fault diagnosis</p>
+        <h2>Auditable Multi-Evidence Graph Ranking for Fault Diagnosis in ESS-PV Systems</h2>
+        <p>Xingyun Wang, Hui Tian, Lee Weng, Yanming Zhu, Xuefei Yin<br><em>IEEE Symposium Series on Computational Intelligence (SSCI 2027), IEEE Symposia on CI for Energy, Transport, and Environmental Sustainability</em></p>
+      </article>
+      <article class="entry">
+        <p class="kicker">2026 · Load forecasting</p>
+        <h2>AI-driven household electricity load forecasting: challenges, methods, and future directions</h2>
+        <p>Elmar Ibrahimov, Xuefei Yin, Lee Weng, Yong Zhu, Yanming Zhu, Alan Wee-Chung Liew<br><em>Artificial Intelligence Review</em></p>
+        <a class="text-link" href="https://doi.org/10.1007/s10462-026-11583-w">DOI →</a>
+      </article>
+      <article class="entry">
+        <p class="kicker">2026 · Load forecasting</p>
+        <h2>HGTFNet: A hybrid graph-enhanced time-frequency network for multivariate short-term electric load forecasting</h2>
+        <p>Yi Ji, Yongyuan Zhu, Siliang Lu, Lixia Yang, Xiang Ji, Alan Wee-Chung Liew<br><em>Knowledge-Based Systems</em></p>
+        <a class="text-link" href="https://doi.org/10.1016/j.knosys.2026.116843">DOI →</a>
+      </article>
+      <article class="entry">
+        <p class="kicker">2026 · Graph anomaly detection</p>
+        <h2>Correcting False Alarms from Unseen: Adapting Graph Anomaly Detectors at Test Time</h2>
+        <p>Junjun Pan, Yixin Liu, Chuan Zhou, Fei Xiong, Alan Wee-Chung Liew, Shirui Pan<br><em>Proceedings of the AAAI Conference on Artificial Intelligence</em></p>
+        <a class="text-link" href="https://doi.org/10.1609/aaai.v40i29.39654">DOI →</a>
+      </article>
+      <article class="entry">
+        <p class="kicker">2026 · Graph anomaly detection</p>
+        <h2>Rethinking Feature Alignment in Generalist Graph Anomaly Detection: A Relational Fingerprint-based Approach</h2>
+        <p>Yujing Liu, Yixin Liu, Yu Zheng, Alan Wee-Chung Liew, Xiaofeng Cao, Shirui Pan<br><em>Proceedings of the 43rd International Conference on Machine Learning</em></p>
+        <a class="text-link" href="https://proceedings.mlr.press/v306/liu26cp.html">Paper →</a>
+      </article>
+      <article class="entry">
+        <p class="kicker">2026 · Causal reasoning</p>
+        <h2>Causal-Audit: Explicit and Auditable Graph-based Reasoning via Target-Aware Causal Chain Construction</h2>
+        <p>Su Lan, Xuefei Yin, Yanming Zhu, Alan Wee-Chung Liew<br><em>Findings of the Association for Computational Linguistics: ACL 2026</em></p>
+        <a class="text-link" href="https://doi.org/10.18653/v1/2026.findings-acl.607">DOI →</a>
+      </article>
+      <article class="entry">
+        <p class="kicker">2025 · Load forecasting</p>
+        <h2>WTC-iPST: A deep learning framework for short-term electric load forecasting with multi-scale feature extraction</h2>
+        <p>Yi Ji, Yongyuan Zhu, Siliang Lu, Lixia Yang, Alan Wee-Chung Liew<br><em>Knowledge-Based Systems</em></p>
+        <a class="text-link" href="https://doi.org/10.1016/j.knosys.2025.113907">DOI →</a>
+      </article>
+      <article class="entry">
+        <p class="kicker">2025 · Uncertainty calibration</p>
+        <h2>Calibrated Uncertainty Estimation for Trustworthy Deep IoT Attack Detection</h2>
+        <p>Biprodip Pal, Md. Saiful Islam, Alan Wee-Chung Liew<br><em>IEEE Transactions on Dependable and Secure Computing</em></p>
+        <a class="text-link" href="https://doi.org/10.1109/TDSC.2025.3598350">DOI →</a>
+      </article>
+      <article class="entry">
+        <p class="kicker">2025 · Time series forecasting</p>
+        <h2>Towards Expressive Spectral-Temporal Graph Neural Networks for Time Series Forecasting</h2>
+        <p>Ming Jin, Guangsi Shi, Yuan-Fang Li, Bo Xiong, Tian Zhou, Flora D. Salim, Liang Zhao, Lingfei Wu, Qingsong Wen, Shirui Pan<br><em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em></p>
+        <a class="text-link" href="https://doi.org/10.1109/TPAMI.2025.3545671">DOI →</a>
+      </article>
+      <article class="entry">
+        <p class="kicker">2024 · Time series analysis</p>
+        <h2>A Survey on Graph Neural Networks for Time Series: Forecasting, Classification, Imputation, and Anomaly Detection</h2>
+        <p>Ming Jin, Huan Yee Koh, Qingsong Wen, Daniele Zambon, Cesare Alippi, Geoffrey I. Webb, Irwin King, Shirui Pan<br><em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em></p>
+        <a class="text-link" href="https://doi.org/10.1109/TPAMI.2024.3443141">DOI →</a>
+      </article>
+      <article class="entry">
+        <p class="kicker">2024 · Time series anomaly detection</p>
+        <h2>Correlation-Aware Spatial-Temporal Graph Learning for Multivariate Time-Series Anomaly Detection</h2>
+        <p>Yu Zheng, Huan Yee Koh, Ming Jin, Lianhua Chi, Khoa T. Phan, Shirui Pan, Yi-Ping Phoebe Chen, Wei Xiang<br><em>IEEE Transactions on Neural Networks and Learning Systems</em></p>
+        <a class="text-link" href="https://doi.org/10.1109/TNNLS.2023.3325667">DOI →</a>
+      </article>
+      <article class="entry">
+        <p class="kicker">2023 · Grid cybersecurity</p>
+        <h2>An Efficient Privacy-Enhancing Cross-Silo Federated Learning and Applications for False Data Injection Attack Detection in Smart Grids</h2>
+        <p>Hong-Yen Tran, Jiankun Hu, Xuefei Yin, Hemanshu R. Pota<br><em>IEEE Transactions on Information Forensics and Security</em></p>
+        <a class="text-link" href="https://doi.org/10.1109/TIFS.2023.3267892">DOI →</a>
+      </article>
+      <article class="entry">
+        <p class="kicker">2023 · Network privacy</p>
+        <h2>Traffic flow privacy protection with performance guarantee for classification in large networks</h2>
+        <p>Hui Tian<br><em>Information Sciences</em></p>
+        <a class="text-link" href="https://doi.org/10.1016/j.ins.2023.118987">DOI →</a>
+      </article>
+      <article class="entry">
+        <p class="kicker">2023 · Time series forecasting</p>
+        <h2>Multivariate Time Series Forecasting with Dynamic Graph Neural ODEs</h2>
+        <p>Ming Jin, Yu Zheng, Yuan-Fang Li, Siheng Chen, Bin Yang, Shirui Pan<br><em>IEEE Transactions on Knowledge and Data Engineering</em></p>
+        <a class="text-link" href="https://doi.org/10.1109/TKDE.2022.3221989">DOI →</a>
+      </article>
+      <article class="entry">
+        <p class="kicker">2022 · Grid cybersecurity</p>
+        <h2>PowerFDNet: Deep Learning-Based Stealthy False Data Injection Attack Detection for AC-Model Transmission Systems</h2>
+        <p>Xuefei Yin, Yanming Zhu, Yi Xie, Jiankun Hu<br><em>IEEE Open Journal of the Computer Society</em></p>
+        <a class="text-link" href="https://doi.org/10.1109/OJCS.2022.3199755">DOI →</a>
+      </article>
+      <article class="entry">
+        <p class="kicker">2022 · Grid cybersecurity</p>
+        <h2>A Subgrid-Oriented Privacy-Preserving Microservice Framework Based on Deep Neural Network for False Data Injection Attack Detection in Smart Grids</h2>
+        <p>Xuefei Yin, Yanming Zhu, Jiankun Hu<br><em>IEEE Transactions on Industrial Informatics</em></p>
+        <a class="text-link" href="https://doi.org/10.1109/TII.2021.3102332">DOI →</a>
+      </article>
+      <article class="entry">
+        <p class="kicker">2022 · Energy Management &amp; Optimisation</p>
+        <h2>Online delay-guaranteed workload scheduling to minimize power cost in cloud data centers using renewable energy</h2>
+        <p>Huaiwen He, Hong Shen, Qing Hao, Hui Tian<br><em>Journal of Parallel and Distributed Computing</em></p>
+        <a class="text-link" href="https://doi.org/10.1016/j.jpdc.2021.09.002">DOI →</a>
+      </article>
+      <article class="entry">
+        <p class="kicker">2022 · Related grid-security dataset</p>
+        <h2>Designing false data injection attacks penetrating AC-based bad data detection system and FDI dataset generation</h2>
+        <p>Nam N. Tran, Hemanshu R. Pota, Quang N. Tran, Xuefei Yin, Jiankun Hu<br><em>Concurrency and Computation: Practice and Experience</em></p>
+        <a class="text-link" href="https://doi.org/10.1002/cpe.5956">DOI →</a>
+      </article>
+      <article class="entry">
+        <p class="kicker">2022 · Federated learning</p>
+        <h2>A Comprehensive Survey of Privacy-preserving Federated Learning: A Taxonomy, Review, and Future Directions</h2>
+        <p>Xuefei Yin, Yanming Zhu, Jiankun Hu<br><em>ACM Computing Surveys</em></p>
+        <a class="text-link" href="https://doi.org/10.1145/3460427">DOI →</a>
+      </article>
+      <article class="entry">
+        <p class="kicker">2020 · Time series forecasting</p>
+        <h2>Connecting the Dots: Multivariate Time Series Forecasting with Graph Neural Networks</h2>
+        <p>Zonghan Wu, Shirui Pan, Guodong Long, Jing Jiang, Xiaojun Chang, Chengqi Zhang<br><em>Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery &amp; Data Mining</em></p>
+        <a class="text-link" href="https://doi.org/10.1145/3394486.3403118">DOI →</a>
+      </article>
+    </div>
+  </section>
 </main>
-<footer><div class="wrap footer-inner"><span>AI4SmartGrids Lab</span><a href="#top">Back to top ↑</a></div></footer>
+<footer><div class="wrap footer-inner"><a class="footer-brand" href="index.html"><img src="assets/ai4smartgrids-logo.webp" width="840" height="152" alt="AI4SmartGrids Lab"></a><a href="#top">Back to top ↑</a></div></footer>
 </body>
 </html>

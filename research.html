@@ -7,7 +7,7 @@
   <title>Research | AI4SmartGrids Lab</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="site.js" defer></script>
 </head>
@@ -15,13 +15,13 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="index.html"><span class="mark" aria-hidden="true">ϟ</span> AI4SmartGrids <small>LAB</small></a>
+    <a class="brand" href="index.html"><img src="assets/ai4smartgrids-logo.webp" width="840" height="152" alt="AI4SmartGrids Lab"></a>
     <button class="menu" type="button" aria-controls="navigation" aria-expanded="false">Menu</button>
     <nav id="navigation" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="research.html" aria-current="page">Research</a>
       <a href="projects.html">Projects</a>
-      <a href="team.html">Our Team</a>
+      <a href="team.html">Team</a>
       <a href="publications.html">Publications</a>
       <a href="news.html">News</a>
       <a href="contact.html">Contact</a>
@@ -29,17 +29,74 @@
   </div>
 </header>
 <main id="main" class="inner-page" tabindex="-1">
-  <section id="research" class="section wrap" aria-labelledby="research-title">
-    <h1 id="research-title">Research</h1>
-    <p class="section-intro">We study how AI can help power systems anticipate changes, coordinate distributed energy resources and detect faults.</p>
-    <div class="research-grid">
-      <article class="research"><h3>Grid forecasting & stability</h3><p>Develop models for electricity demand and grid frequency to support timely operating decisions.</p></article>
-      <article class="research"><h3>Battery storage & energy management</h3><p>Explore AI-based strategies for coordinating battery response, dispatch and energy management.</p></article>
-      <article class="research"><h3>Solar & renewable integration</h3><p>Study how forecasting and control can help integrate variable solar generation and other renewables into grids and microgrids.</p></article>
-      <article class="research"><h3>Fault diagnosis & cybersecurity</h3><p>Explore how AI and network analysis can detect faults and anomalous behaviour in connected energy systems.</p></article>
+  <section class="research-heading" aria-labelledby="research-title">
+    <div class="wrap">
+      <h1 id="research-title">Research</h1>
+      <p>We develop AI methods to forecast electricity demand and grid frequency, coordinate battery storage, integrate renewable generation and diagnose faults in energy systems.</p>
     </div>
   </section>
+  <div class="wrap research-programme">
+    <nav class="research-index" aria-label="Research directions">
+      <ul>
+        <li><a href="#grid-forecasting">Grid forecasting <span aria-hidden="true">↓</span></a></li>
+        <li><a href="#battery-storage">Battery storage <span aria-hidden="true">↓</span></a></li>
+        <li><a href="#renewable-integration">Renewable integration <span aria-hidden="true">↓</span></a></li>
+        <li><a href="#grid-security">Fault diagnosis &amp; security <span aria-hidden="true">↓</span></a></li>
+      </ul>
+    </nav>
+    <div class="research-topics">
+      <article id="grid-forecasting" class="research-topic" aria-labelledby="grid-forecasting-title">
+        <h2 id="grid-forecasting-title">Grid Forecasting &amp; Stability</h2>
+        <div class="research-detail">
+        <p class="research-question">How early can a model anticipate a change in grid frequency, and how confidently can it forecast electricity demand?</p>
+        <ul>
+          <li><strong>Grid frequency.</strong> Study time-series models that use recent grid measurements to forecast near-term frequency changes and inform battery response.</li>
+          <li><strong>Electricity demand.</strong> Investigate short-term household load forecasting under irregular consumption patterns and quantify uncertainty in the predictions.</li>
+        </ul>
+        <a class="text-link" href="publications.html">Read our work on household load forecasting →</a>
+        </div>
+      </article>
+      <article id="battery-storage" class="research-topic" aria-labelledby="battery-storage-title">
+        <h2 id="battery-storage-title">Battery Storage &amp; Energy Management</h2>
+        <div class="research-detail">
+        <p class="research-question">When should a battery charge, discharge or reserve capacity for grid support?</p>
+        <ul>
+          <li><strong>Battery dispatch.</strong> Explore how AI forecasts can inform scheduling and real-time battery decisions.</li>
+          <li><strong>Operational constraints.</strong> Examine how state of charge, power limits and battery degradation affect dispatch decisions and availability for grid services.</li>
+        </ul>
+        <a class="text-link" href="projects.html">Explore the Renox collaboration →</a>
+        </div>
+      </article>
+      <article id="renewable-integration" class="research-topic" aria-labelledby="renewable-integration-title">
+        <h2 id="renewable-integration-title">Solar &amp; Renewable Integration</h2>
+        <div class="research-detail">
+        <p class="research-question">How can local energy systems accommodate more solar generation when output varies with weather and time of day?</p>
+        <ul>
+          <li><strong>Solar forecasting.</strong> Investigate how weather forecasts and historical generation data can help predict photovoltaic output and estimate forecast uncertainty.</li>
+          <li><strong>Grid and microgrid operation.</strong> Explore forecast-informed coordination of solar generation and batteries to manage local demand, peak exports and curtailment.</li>
+        </ul>
+        </div>
+      </article>
+      <article id="grid-security" class="research-topic" aria-labelledby="grid-security-title">
+        <h2 id="grid-security-title">Fault Diagnosis &amp; Grid Cybersecurity</h2>
+        <div class="research-detail">
+        <p class="research-question">When an energy system behaves unexpectedly, can AI help identify the cause and explain the evidence behind the diagnosis?</p>
+        <ul>
+          <li><strong>Fault diagnosis.</strong> Explore how telemetry, equipment records and system topology can help narrow down possible faults in solar and storage systems.</li>
+          <li><strong>Secure monitoring.</strong> Study how anomaly detection and network analysis could help identify abnormal measurements and distinguish equipment faults from data or communication problems.</li>
+        </ul>
+        </div>
+      </article>
+    </div>
+    <aside class="research-topic research-partnership" aria-labelledby="research-highlight-title">
+      <h2 id="research-highlight-title">Research in practice</h2>
+      <div class="research-detail">
+        <p>Through the <strong>Smart Energy Innovation Lab</strong>, Griffith University and Renox Technology are developing an AI agent to forecast grid frequency in real time and coordinate battery energy storage response.</p>
+      <a class="text-link" href="https://renox.tech/smartenergyinnovationlab/">Read the public project overview →</a>
+      </div>
+    </aside>
+  </div>
 </main>
-<footer><div class="wrap footer-inner"><span>AI4SmartGrids Lab</span><a href="#top">Back to top ↑</a></div></footer>
+<footer><div class="wrap footer-inner"><a class="footer-brand" href="index.html"><img src="assets/ai4smartgrids-logo.webp" width="840" height="152" alt="AI4SmartGrids Lab"></a><a href="#top">Back to top ↑</a></div></footer>
 </body>
 </html>

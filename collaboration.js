@@ -1,32 +1,42 @@
-const gallery = document.querySelector('.collaboration-gallery');
-const slides = Array.from(gallery.querySelectorAll('.collaboration-slides img'));
-const controls = gallery.querySelector('.collaboration-controls');
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-let current = 0;
-let timer;
+// Industry collaboration gallery: automatically advance every 2 seconds.
+// Hovering or using the arrow buttons does not pause autoplay.
+(() => {
+  const gallery = document.querySelector('.collaboration-gallery');
+  if (!gallery) return;
 
-function moveSlide(offset) {
-  slides[current].hidden = true;
-  current = (current + offset + slides.length) % slides.length;
-  slides[current].hidden = false;
-}
+  const slides = Array.from(gallery.querySelectorAll('.collaboration-slides img'));
+  const controls = gallery.querySelector('.collaboration-controls');
+  if (slides.length < 2 || !controls) return;
 
-function scheduleNextSlide() {
-  window.clearTimeout(timer);
-  if (!reducedMotion.matches && !document.hidden && !gallery.matches(':hover, :focus-within')) {
-    timer = window.setTimeout(() => {
-      moveSlide(1);
-      scheduleNextSlide();
-    }, 2000);
+  let current = slides.findIndex(slide => !slide.hidden);
+  if (current === -1) current = 0;
+  let timer;
+
+  function displaySlide(index) {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => {
+      slide.hidden = i !== current;
+    });
   }
-}
 
-gallery.querySelector('[data-previous]').addEventListener('click', () => moveSlide(-1));
-gallery.querySelector('[data-next]').addEventListener('click', () => moveSlide(1));
-for (const event of ['pointerenter', 'pointerleave', 'focusin', 'focusout']) {
-  gallery.addEventListener(event, () => window.requestAnimationFrame(scheduleNextSlide));
-}
-reducedMotion.addEventListener('change', scheduleNextSlide);
-document.addEventListener('visibilitychange', scheduleNextSlide);
-controls.hidden = false;
-scheduleNextSlide();
+  function startAutoplay() {
+    window.clearInterval(timer);
+    if (!document.hidden) {
+      timer = window.setInterval(() => displaySlide(current + 1), 2000);
+    }
+  }
+
+  controls.querySelector('[data-previous]')?.addEventListener('click', () => {
+    displaySlide(current - 1);
+    startAutoplay();
+  });
+  controls.querySelector('[data-next]')?.addEventListener('click', () => {
+    displaySlide(current + 1);
+    startAutoplay();
+  });
+
+  document.addEventListener('visibilitychange', startAutoplay);
+  displaySlide(current);
+  controls.hidden = false;
+  startAutoplay();
+})();

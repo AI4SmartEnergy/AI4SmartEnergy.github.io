@@ -1,3 +1,3 @@
 # AI4SmartGrids Lab
 
-https://ai4smartgrids.github.io/
+https://AI4SmartEnergy.github.io/
